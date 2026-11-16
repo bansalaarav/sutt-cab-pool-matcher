@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 
 CITIES_SERVED = ["delhi", "jaipur"]
 TIME_SLOTS = ["morning", "afternoon", "evening", "night"]
@@ -31,8 +32,15 @@ class Cab:
 
 
 
+
 ride_requests = []
 cabs = []
+
+# Load cabs from cabs.json
+with open("cabs.json", "r") as file:
+    for cab in json.load(file):
+        cabs.append(Cab(cab["driver_name"], cab["seats"], cab["has_departed"], cab["destination"], cab["time_slot"], cab["student_list"]))
+
 
 print("Welcome to the Cab Pool Matcher!")
 print("Enter 1 to add a new ride request")
@@ -82,5 +90,22 @@ while True:
     elif action == "3":
         print("Bye")
         break
+
+
+# Save cab data to cabs.json
+data = []
+for cab in cabs:
+    data.append(
+        {
+            "driver_name": cab.driver_name,
+            "seats": cab.seats,
+            "destination": cab.destination,
+            "time_slot": cab.time_slot,
+            "has_departed": cab.has_departed,
+            "student_list": cab.student_list
+        }
+    )
+with open("cabs.json", "w") as file:
+    json.dump(data, file, indent=2)
 
 print()
