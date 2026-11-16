@@ -6,22 +6,12 @@ MAX_STUDENT_YEAR = 5
 
 
 class RideRequest:
-    def __init__(self, student_name, destination, time_slot, student_year, submitted_at=datetime.now()):
+    def __init__(self, student_name, destination, time_slot, student_year):
         self.student_name = student_name
-
-        if destination not in CITIES_SERVED:
-            raise ValueError("Sorry, we don't go to that city.")
         self.destination = destination
-
-        if time_slot not in TIME_SLOTS:
-            raise ValueError("Please enter a valid time slot.")
         self.time_slot = time_slot
-
-        if student_year < 1 or student_year > MAX_STUDENT_YEAR:
-            raise ValueError("Please enter a valid student year.")
         self.student_year = student_year
-
-        self.submitted_at = submitted_at
+        self.submitted_at = datetime.now()
 
     def __str__(self):
         return f"{self.student_name} | {self.destination} | {self.time_slot} | Year {self.student_year} | {self.submitted_at}"
@@ -32,15 +22,8 @@ class Cab:
         self.driver_name = driver_name
         self.seats = seats
         self.has_departed = has_departed
-
-        if destination not in CITIES_SERVED:
-            raise ValueError("Sorry, we don't go to that city.")
         self.destination = destination
-
-        if time_slot not in TIME_SLOTS:
-            raise ValueError("Please enter a valid time slot.")
         self.time_slot = time_slot
-
         self.student_list = student_list
 
     def __str__(self):
@@ -57,20 +40,37 @@ print("Enter 2 to see everyone still waiting plus all cabs")
 print("Enter 3 to quit")
 while True:
     print()
-    action = int(input("> "))
+
+    action = input("1/2/3 > ").strip()
     
-    if action == 1:
+    if action == "1":
         student_name = input("Student name: ").strip()
+
         destination = input("Destination: ").strip().lower()
+        if destination not in CITIES_SERVED:
+            print("Sorry, we don't go to that city.")
+            continue
+
         time_slot = input("Time Slot: ").strip().lower()
-        student_year = int(input("Student year: ").strip())
+        if time_slot not in TIME_SLOTS:
+            print("Please enter a valid time slot.")
+            continue
+
+        try:
+            student_year = int(input("Student year: ").strip())
+        except ValueError:
+            print(f"Student year should be an integer from 1 to {MAX_STUDENT_YEAR}.")
+            continue
+        if student_year < 1 or student_year > MAX_STUDENT_YEAR:
+            print(f"Please enter a valid student year (1 to {MAX_STUDENT_YEAR}).")
+            continue
 
         req = RideRequest(student_name, destination, time_slot, student_year)
         ride_requests.append(req)
 
         print("Ride request added to queue!")
 
-    elif action == 2:
+    elif action == "2":
         print("Students:")
         for req in ride_requests:
             print(req)
@@ -79,7 +79,7 @@ while True:
         for cab in cabs:
             print(cab)
 
-    elif action == 3:
+    elif action == "3":
         print("Bye")
         break
 
