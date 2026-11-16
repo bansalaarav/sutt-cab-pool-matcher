@@ -1,0 +1,130 @@
+[
+  {
+    "student_name": "Aarav Mehta",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 1,
+    "completed": false,
+    "submitted_at": "2026-11-16T08:05:00"
+  },
+  {
+    "student_name": "Priya Nair",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 2,
+    "completed": false,
+    "submitted_at": "2026-11-16T08:12:00"
+  },
+  {
+    "student_name": "Rohan Gupta",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 1,
+    "completed": false,
+    "submitted_at": "2026-11-16T08:20:00"
+  },
+  {
+    "student_name": "Ishita Rao",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 3,
+    "completed": false,
+    "submitted_at": "2026-11-16T08:31:00"
+  },
+  {
+    "student_name": "Kabir Malhotra",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 1,
+    "completed": false,
+    "submitted_at": "2026-11-16T08:45:00"
+  },
+  {
+    "student_name": "Sneha Iyer",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 2,
+    "completed": false,
+    "submitted_at": "2026-11-16T09:02:00"
+  },
+  {
+    "student_name": "Arjun Reddy",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 5,
+    "completed": false,
+    "submitted_at": "2026-11-16T09:15:00"
+  },
+  {
+    "student_name": "Meera Joshi",
+    "destination": "delhi",
+    "time_slot": "morning",
+    "student_year": 4,
+    "completed": false,
+    "submitted_at": "2026-11-16T09:40:00"
+  },
+  {
+    "student_name": "Vivaan Kapoor",
+    "destination": "jaipur",
+    "time_slot": "afternoon",
+    "student_year": 2,
+    "completed": false,
+    "submitted_at": "2026-11-16T10:10:00"
+  },
+  {
+    "student_name": "Ananya Das",
+    "destination": "jaipur",
+    "time_slot": "afternoon",
+    "student_year": 3,
+    "completed": false,
+    "submitted_at": "2026-11-16T10:25:00"
+  },
+  {
+    "student_name": "Dev Patel",
+    "destination": "jaipur",
+    "time_slot": "evening",
+    "student_year": 1,
+    "completed": false,
+    "submitted_at": "2026-11-16T11:00:00"
+  },
+  {
+    "student_name": "Aditya Bose",
+    "destination": "jaipur",
+    "time_slot": "evening",
+    "student_year": 4,
+    "completed": false,
+    "submitted_at": "2026-11-16T11:05:00"
+  },
+  {
+    "student_name": "Riya Saxena",
+    "destination": "jaipur",
+    "time_slot": "evening",
+    "student_year": 4,
+    "completed": false,
+    "submitted_at": "2026-11-16T11:30:00"
+  },
+  {
+    "student_name": "Tara Menon",
+    "destination": "jaipur",
+    "time_slot": "morning",
+    "student_year": 2,
+    "completed": false,
+    "submitted_at": "2026-11-16T12:00:00"
+  },
+  {
+    "student_name": "Nikhil Jain",
+    "destination": "delhi",
+    "time_slot": "afternoon",
+    "student_year": 3,
+    "completed": false,
+    "submitted_at": "2026-11-16T12:15:00"
+  },
+  {
+    "student_name": "Pooja Kulkarni",
+    "destination": "delhi",
+    "time_slot": "evening",
+    "student_year": 1,
+    "completed": false,
+    "submitted_at": "2026-11-16T12:40:00"
+  }
+]
